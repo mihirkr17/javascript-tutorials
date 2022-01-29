@@ -1,0 +1,133 @@
+/* System Style Sheet So Don't Touch Here... */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  --color-body: white;
+  --color-text: black;
+}
+
+html[data-theme="dark"] {
+  --color-body: #2a2a2a;
+  --color-text: white;
+}
+
+body {
+  position: relative;
+  background-color: var(--color-body);
+  color: var(--color-text);
+}
+
+#m-body {
+  width: 85%;
+  min-height: 600px;
+  border-left: 3px solid #797878;
+  border-right: 3px solid #797878;
+  margin: 0 auto;
+  position: relative;
+  padding: 0px 4px 49px 4px;
+}
+
+#checkbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+}
+
+#m-body > h2 {
+  width: 100%;
+  color: #ffffff;
+  background-color: #797878;
+  padding: 12px 0px;
+  text-align: center;
+  margin-bottom: 4px;
+  font-weight: 400;
+  position: relative;
+}
+
+#m-body > h3 {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 8px 0px;
+  text-align: center;
+  background-color: #797878;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.round_circel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circel {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 100%;
+  overflow: hidden;
+  opacity: 0.2;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.orange,
+.blue,
+.red,
+.hotpink {
+  width: 50%;
+  height: 50%;
+}
+
+.orange {
+  background-color: orange;
+  border-bottom: white 1px solid;
+  border-right: white 1px solid;
+  animation: myMove 2s infinite;
+  animation-timing-function: linear;
+}
+
+.blue {
+  background-color: blue;
+  border-bottom: white 1px solid;
+  border-left: white 1px solid;
+}
+
+.red {
+  background-color: red;
+  border-right: white 1px solid;
+  border-top: white 1px solid;
+}
+
+.hotpink {
+  background-color: hotpink;
+  border-top: white 1px solid;
+  border-left: white 1px solid;
+}
+
+/* System Style Sheet So Don't Touch Here... */
