@@ -253,28 +253,105 @@
 // console.log(tuckArray([15, 150], [45, 75, 35]));
 
 
-/*
-task : Find the Smallest & second smallest.
-*/
-const myArray = [5, 4, 7, 5, 3, 2, 10];
+// /*
+// task : Find the Smallest & second smallest.
+// */
+// const myArray = [5, 4, 7, 5, 3, 2, 10];
 
-function smallAndSecond(arr) {
-   let firstInfinity = arr[0];
-   let secondInfinity = arr[0];
-   let emptyArr = [];
+// function smallAndSecond(arr) {
+//    let firstInfinity = arr[0];
+//    let secondInfinity = arr[0];
+//    let emptyArr = [];
 
-   for (let i = 0; i < arr.length; i++) {
-      const elem = arr[i];
+//    for (let i = 0; i < arr.length; i++) {
+//       const elem = arr[i];
 
-      if (elem < firstInfinity) {
-         secondInfinity = firstInfinity;
-         firstInfinity = elem;
-      } else if (elem < secondInfinity) {
-         secondInfinity = elem;
+//       if (elem < firstInfinity) {
+//          secondInfinity = firstInfinity;
+//          firstInfinity = elem;
+//       } else if (elem < secondInfinity) {
+//          secondInfinity = elem;
+//       }
+//    }
+//    emptyArr.push(firstInfinity, secondInfinity);
+//    return emptyArr;
+// }
+
+// console.log(smallAndSecond(myArray));
+
+// let name = {
+//    firstName : "Mihir",
+//    lastName : "Roy"
+// }
+
+// let printName = function () {
+//    console.log(this.firstName + " " + this.lastName);
+// }
+
+// Function.prototype.myBind = function (...arg) {
+//    let obj = this;
+//    return function () {
+//       obj.call(arg[0]);
+//    }
+// }
+
+// let printMyName2 = printName.myBind(name);
+// printMyName2();
+
+// const product = [
+//    { name: "iPhone 14", price: 70000 },
+//    { name: "Nokia 630", price: 8000 },
+//    { name: "Asus Zenfone", price: 11000 },
+//    { name: "Redmi Note 7", price: 16000 }
+// ];
+
+// function searchProduct(product, searchIndex) {
+//    for (const elem of product) {
+//       if (elem.name.includes(searchIndex)) {
+//          console.log(elem);
+//       }
+//    }
+// }
+
+// searchProduct(product, "Nokia");
+
+
+// // Javascript array entries. it return key and value of array
+// const fruits = ["banana", "apple", "mango"];
+// let f = fruits.entries();
+
+// for (let x of f) {
+//    console.log(x);
+// }
+
+// Javascript every method
+// const ages = [18, 30, 25, 40];
+
+// ages.every((age) => {
+//    console.log(age < 20);
+// });
+
+const fruits = ["apple", "banana", "mango", "jackfruits", "pine-apple"];
+let func = fruits.filter((arr, index) => {
+   if (arr == "apple") {
+      return arr;
+   }
+});
+console.log(func);
+
+// Finding prime numbers in array with filter method.
+const numbers = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+function isPrime (arr) {
+   for (let i = 2; arr > i; i++) {
+      if (arr % i == 0) {
+         return false;
       }
    }
-   emptyArr.push(firstInfinity, secondInfinity);
-   return emptyArr;
+   return arr > 1;
 }
 
-console.log(smallAndSecond(myArray));
+let gg = numbers.filter(isPrime);
+console.log(gg);
+
+
